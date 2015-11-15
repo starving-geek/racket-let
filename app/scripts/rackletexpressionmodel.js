@@ -27,25 +27,6 @@ LetExpressionModel.prototype.randomLetExpression = function() {
     xVar2 = getRandomInt(2, 6);
     val = getRandomInt(1, 6);
 
-    /* Format of racket let and let* expressions
-        (define x 5)
-        (define y 2)
-        (let ([x 3]
-            [y (+ x 1)])
-          (+ x y))
-
-        (9)
-
-        (define x 5)
-        (define y 2)
-        (let* ([x 3]
-            [y (+ x 1)])
-          (+ x y))
-
-        (7)
-
-    */
-
     /*
         Change xVar1 and xVar2 values if they are the same value in order to avoid confusion
     */
