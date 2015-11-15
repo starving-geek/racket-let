@@ -1,6 +1,6 @@
 /*
  * Tyler Deans
- * November 12, 2015
+ * November 15, 2015
  */
 
 
@@ -19,7 +19,7 @@ LetExpressionModel.prototype.randomLetExpression = function() {
 	
     this.answer = 0;
 	
-    
+    // A number between 1 and 2
     letChoice = getRandomInt(1, 3);
     // Numbers between 1 and 5
     xVar1 = getRandomInt(1, 6);
@@ -55,6 +55,7 @@ LetExpressionModel.prototype.randomLetExpression = function() {
         yVar = xVar1 + val;
         this.answer = xVar1 + yVar;
 
+        // Shows the let expression in Racket on the webpage
         this.letExpressionString = "<pre>(define x " + xVar1 + ")" + "\n";
         this.letExpressionString += "(define y " + yVar + ")" + "\n";
         this.letExpressionString += "(let ([x " + xVar2 + "]" + "\n";
@@ -62,12 +63,13 @@ LetExpressionModel.prototype.randomLetExpression = function() {
         this.letExpressionString += "  (+ x y))" + "\n";
         this.letExpressionString += "</pre></br>";
     } 
-
+    // Let* expression
     else if (letChoice === 2) { 
         //Let* expression
         yVar = xVar2 + val;
         this.answer = xVar2 + yVar;
 
+        // Shows the let* expression in Racket on the webpage
         this.letExpressionString = "<pre>(define x " + xVar1 + ")" + "\n";
         this.letExpressionString += "(define y " + yVar + ")" + "\n";
         this.letExpressionString += "(let* ([x " + xVar2 + "]" + "\n";

@@ -70,9 +70,10 @@ QuestionBankModel.prototype.masteryAchieved = function() {
 
 
 /*
- * Compare the student's answer to the correct answer(s).
+ * Compare the student's answer to the correct answer.
  */
 QuestionBankModel.prototype.checkAnswer = function (studentAnswer) {
+    // Converts studentAnswer from a string to an integer
     var studentAnswerInt = parseInt(studentAnswer);
     for (var i = 0; i < this.answers.length; i++) {
         if (this.answers[i] === studentAnswerInt) {
