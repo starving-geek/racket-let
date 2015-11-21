@@ -52,8 +52,12 @@ LetExpressionModel.prototype.randomLetExpression = function() {
     // Let expression
     if (letChoice === 1) {
 
+        if (xVar1 === xVar2) {
+            xVar2 += 1;
+        }
+
         yVar = xVar1 + val;
-        this.answer = xVar1 + yVar;
+        this.answer = xVar2 + yVar;
 
         // Shows the let expression in Racket on the webpage
         this.letExpressionString = "<pre>(define x " + xVar1 + ")" + "\n";
@@ -64,7 +68,10 @@ LetExpressionModel.prototype.randomLetExpression = function() {
         this.letExpressionString += "</pre></br>";
     } 
     // Let* expression
-    else if (letChoice === 2) { 
+    else if (letChoice === 2) {
+        if (xVar1 === xVar2) {
+            xVar2 += 1;
+        }
         //Let* expression
         yVar = xVar2 + val;
         this.answer = xVar2 + yVar;
