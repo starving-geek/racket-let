@@ -32,7 +32,7 @@ LetExpressionModel.prototype.randomLetExpression = function() {
     */
     // Let expression
     if (letChoice === 1) {
-
+        // If xVar1 and xVar2 have the same value
         if (xVar1 === xVar2) {
             xVar2 += 1;
         }
